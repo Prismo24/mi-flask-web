@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Acerca | Mi App Flask{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <span class="eyebrow">Acerca</span>
+    <h1>Sobre este proyecto</h1>
+    <p>Aplicación de práctica de la sección "Desplegar Aplicación" del curso de Flask.
+        Demuestra el flujo completo: preparar el entorno de producción, crear el
+        <code>requirements.txt</code>, subir el código a un repositorio y desplegarlo
+        en PythonAnywhere.</p>
+    <a class="btn" href="{{ url_for('index') }}">Volver al inicio</a>
+</section>
+{% endblock %}

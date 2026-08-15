@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio | Mi App Flask{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <span class="eyebrow">Sección 28 · Despliegue</span>
+    <h1>¡Mi aplicación Flask está <em>en línea</em>!</h1>
+    <p>Esta página se está sirviendo desde un servidor real en PythonAnywhere.
+        Si la estás viendo en internet, el despliegue funcionó. 🚀</p>
+    <a class="btn" href="{{ url_for('acerca') }}">Ver más</a>
+</section>
+{% endblock %}
