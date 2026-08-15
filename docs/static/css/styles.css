@@ -1,0 +1,90 @@
+:root {
+    --bg: #0f1117;
+    --surface: #171a22;
+    --text: #eef1f6;
+    --muted: #98a2b3;
+    --brand: #6366f1;
+    --line: rgba(255, 255, 255, .1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    border-bottom: 1px solid var(--line);
+    background: color-mix(in srgb, var(--bg) 90%, transparent);
+}
+
+nav {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca { font-weight: 800; font-size: 1.3rem; color: var(--text); text-decoration: none; }
+.marca span { color: var(--brand); }
+
+.links a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 1.4rem;
+    font-weight: 600;
+    transition: color .15s;
+}
+.links a:hover { color: var(--text); }
+
+main { flex: 1; display: grid; place-items: center; padding: 2rem 1.5rem; }
+
+.hero {
+    max-width: 620px;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 3rem 2.2rem;
+}
+
+.eyebrow {
+    color: var(--brand);
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.hero h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); margin: 1rem 0; line-height: 1.1; }
+.hero h1 em { color: var(--brand); font-style: normal; }
+.hero p { color: var(--muted); margin-bottom: 1.8rem; }
+.hero code { background: rgba(99,102,241,.15); color: #c7c9ff; padding: .1rem .4rem; border-radius: 5px; }
+
+.btn {
+    display: inline-block;
+    background: var(--brand);
+    color: #fff;
+    text-decoration: none;
+    padding: .8rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform .15s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+footer {
+    border-top: 1px solid var(--line);
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--muted);
+    font-size: .88rem;
+}
